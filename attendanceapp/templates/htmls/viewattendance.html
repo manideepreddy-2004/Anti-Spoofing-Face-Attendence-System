@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>View Attendance</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="overlay">
+
+        <div class="login-box large-box">
+
+            <h2>VIEW ATTENDANCE</h2>
+
+            <form action="/viewattendanceAction"
+                  method="post">
+
+                {% csrf_token %}
+
+                <input type="text"
+                       name="personid"
+                       placeholder="Enter ID"
+                       required>
+
+                <div class="login-buttons">
+
+                    <button type="submit">
+
+                        Search Attendance
+
+                    </button>
+
+                </div>
+
+            </form>
+
+            <table class="attendance-table">
+
+                <tr>
+
+                    <th>Person ID</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+
+                </tr>
+
+                {% for row in data %}
+
+                <tr>
+
+                    <td>{{row.0}}</td>
+                    <td>{{row.1}}</td>
+                    <td>{{row.2}}</td>
+                    <td>{{row.3}}</td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+            <div class="home-link">
+
+                <span class="home-text">
+
+                    Click here to go
+
+                </span>
+
+                <a href="/adminhome.html">
+
+                    Admin Home
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

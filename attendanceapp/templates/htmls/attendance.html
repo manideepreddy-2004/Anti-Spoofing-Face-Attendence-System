@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Attendance</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="overlay">
+
+        <div class="login-box">
+
+            <h2>
+                START<br>
+                ATTENDANCE
+            </h2>
+
+            {% if data %}
+
+            <h3 class="success-message">
+
+                {{data}}
+
+            </h3>
+
+            {% endif %}
+
+            <form action="/attendanceAction" method="post">
+
+                {% csrf_token %}
+
+                <div class="login-buttons">
+
+                    <button type="submit">
+
+                        Start Attendance
+
+                    </button>
+
+                </div>
+
+            </form>
+
+            <div class="home-link">
+
+                <span class="home-text">
+
+                    Click here to go
+
+                </span>
+
+                <a href="/userlogin.html">
+
+                    User Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
