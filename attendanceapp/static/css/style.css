@@ -1,0 +1,535 @@
+body{
+
+    margin:0;
+    padding:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    overflow:hidden;
+}
+
+/* ================= MAIN BACKGROUND ================= */
+
+.main-container{
+
+    width:100%;
+    height:100vh;
+
+    background:url('../images/bg1.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay{
+
+    width:100%;
+    height:100vh;
+
+    background:rgba(0,0,0,0.22);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(1px);
+
+    position:relative;
+}
+
+/* ================= HOME PAGE ================= */
+
+.overlay h1{
+
+    color:white;
+
+    font-size:58px;
+
+    text-align:center;
+
+    line-height:75px;
+
+    margin-bottom:18px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    text-shadow:2px 2px 15px rgba(0,0,0,0.6);
+}
+
+.overlay p{
+
+    color:white;
+
+    font-size:26px;
+
+    font-weight:500;
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+    text-shadow:1px 1px 10px rgba(0,0,0,0.6);
+}
+
+/* ================= BUTTON CONTAINER ================= */
+
+.button-container{
+
+    display:flex;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+/* ================= HOME BUTTONS ================= */
+
+.button-container button{
+
+    width:250px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:rgba(17,197,222,0.88);
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    letter-spacing:0.5px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    backdrop-filter:blur(5px);
+
+    box-shadow:0 0 20px rgba(17,197,222,0.5);
+}
+
+.button-container button:hover{
+
+    background:#00e5ff;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 30px rgba(0,229,255,0.8);
+}
+
+/* ================= LOGIN BOX ================= */
+
+.login-box{
+
+    width:430px;
+
+    padding:40px;
+
+    background:rgba(0,0,0,0.48);
+
+    border-radius:18px;
+
+    text-align:center;
+
+    backdrop-filter:blur(6px);
+
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+/* ================= LARGE BOX ================= */
+
+.large-box{
+
+    width:80%;
+
+    max-height:80vh;
+
+    overflow:auto;
+}
+
+/* ================= LOGIN BOX TITLE ================= */
+
+.login-box h2{
+
+    color:white;
+
+    margin-bottom:20px;
+
+    font-size:42px;
+
+    line-height:55px;
+
+    letter-spacing:1px;
+
+    font-weight:bold;
+
+    text-shadow:2px 2px 12px rgba(0,0,0,0.5);
+}
+
+/* ================= SUCCESS MESSAGE ================= */
+
+.success-message{
+
+    color:#90EE90 !important;
+
+    text-align:center !important;
+
+    font-size:24px !important;
+
+    font-weight:bold !important;
+
+    margin-bottom:15px !important;
+
+    display:block !important;
+
+    text-shadow:1px 1px 8px rgba(0,0,0,0.7) !important;
+}
+
+/* ================= ERROR MESSAGE ================= */
+
+.error-message{
+
+    color:#ff6b6b !important;
+
+    text-align:center !important;
+
+    font-size:24px !important;
+
+    font-weight:bold !important;
+
+    margin-bottom:15px !important;
+
+    display:block !important;
+
+    text-shadow:1px 1px 8px rgba(0,0,0,0.7) !important;
+}
+
+/* ================= INPUT FIELDS ================= */
+
+.login-box input{
+
+    width:100%;
+
+    height:56px;
+
+    margin-bottom:22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    padding-left:15px;
+
+    font-size:18px;
+
+    background:rgba(255,255,255,0.92);
+
+    box-sizing:border-box;
+}
+
+/* ================= FORM PARAGRAPH ================= */
+
+.login-box p{
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:30px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    text-shadow:none;
+}
+
+/* ================= LOGIN BUTTON AREA ================= */
+
+.login-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:10px;
+}
+
+/* ================= LOGIN BUTTON ================= */
+
+.login-buttons button{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#11c5de;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 0 20px rgba(17,197,222,0.45);
+}
+
+.login-buttons button:hover{
+
+    background:#00e5ff;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 30px rgba(0,229,255,0.7);
+}
+
+/* ================= HOME LINK ================= */
+
+.home-link{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    font-size:20px;
+}
+
+.home-text{
+
+    color:white;
+
+    margin-right:6px;
+}
+
+.home-link a{
+
+    color:#00e5ff;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.home-link a:hover{
+
+    color:white;
+
+    text-decoration:underline;
+}
+
+/* ================= TOP BAR ================= */
+
+.top-bar{
+
+    width:95%;
+
+    position:absolute;
+
+    top:20px;
+
+    display:flex;
+
+    justify-content:flex-end;
+}
+
+/* ================= LOGOUT BUTTON ================= */
+
+.logout-btn{
+
+    width:140px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ff4b5c;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 0 20px rgba(255,75,92,0.5);
+}
+
+.logout-btn:hover{
+
+    background:#ff1e38;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 30px rgba(255,30,56,0.8);
+}
+
+/* ================= ATTENDANCE TABLE ================= */
+
+.attendance-table{
+
+    width:100% !important;
+
+    border-collapse:collapse !important;
+
+    margin-top:20px !important;
+
+    background:rgba(0,0,0,0.55) !important;
+}
+
+.attendance-table th{
+
+    background:#11c5de !important;
+
+    color:#ffffff !important;
+
+    padding:12px !important;
+
+    font-size:20px !important;
+
+    font-weight:bold !important;
+
+    border:1px solid rgba(255,255,255,0.3) !important;
+
+    text-align:center !important;
+}
+
+.attendance-table td{
+
+    color:#ffffff !important;
+
+    background:rgba(255,255,255,0.05) !important;
+
+    padding:10px !important;
+
+    font-size:18px !important;
+
+    border:1px solid rgba(255,255,255,0.2) !important;
+
+    text-align:center !important;
+}
+
+.attendance-table tr:nth-child(even){
+
+    background:rgba(255,255,255,0.06) !important;
+}
+
+/* ================= ATTENDANCE SUMMARY CARD ================= */
+
+.attendance-summary{
+
+    background:rgba(0,0,0,0.55) !important;
+
+    border:1px solid rgba(255,255,255,0.3) !important;
+
+    border-radius:8px !important;
+
+    padding:15px 20px !important;
+
+    margin-top:20px !important;
+
+    color:#ffffff !important;
+
+    text-align:left !important;
+}
+
+.attendance-summary p{
+
+    margin:6px 0 !important;
+
+    font-size:17px !important;
+}
+
+/* ================= STATUS CELL COLOURS ================= */
+
+.status-cell { font-weight: bold !important; }
+
+.status-present  { color: #00e676 !important; }
+.status-late     { color: #ffab40 !important; }
+.status-absent   { color: #ff5252 !important; }
+.status-fullday  { color: #00e5ff !important; }
+.status-halfday  { color: #ffeb3b !important; }
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width:768px){
+
+    .overlay h1{
+
+        font-size:40px;
+
+        line-height:55px;
+    }
+
+    .overlay p{
+
+        font-size:20px;
+    }
+
+    .login-box{
+
+        width:85%;
+
+        padding:25px;
+    }
+
+    .button-container{
+
+        flex-direction:column;
+    }
+
+    .button-container button{
+
+        width:220px;
+
+        font-size:20px;
+    }
+
+    .login-box h2{
+
+        font-size:34px;
+    }
+
+    .attendance-table th{
+
+        font-size:16px;
+    }
+
+    .attendance-table td{
+
+        font-size:14px;
+    }
+}

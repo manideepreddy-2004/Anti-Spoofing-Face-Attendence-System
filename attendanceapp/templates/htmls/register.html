@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Register User</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="overlay">
+
+        <div class="login-box">
+
+            <h2>
+                REGISTER<br>
+                USER
+            </h2>
+
+            <form action="/registerAction" method="post">
+
+                {% csrf_token %}
+
+                <div class="message-box">
+
+                    {% if data %}
+
+                    <h3 class="success-message">
+
+                        {{data}}
+
+                    </h3>
+
+                    {% endif %}
+
+                </div>
+
+                <p>
+
+                    Ensure your face is clearly visible
+                    during registration.
+
+                </p>
+
+                <input
+                    type="text"
+                    name="personid"
+                    placeholder="Enter ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="personname"
+                    placeholder="Enter Name"
+                    required
+                >
+
+                <div class="login-buttons">
+
+                    <button type="submit">
+
+                        Register User
+
+                    </button>
+
+                </div>
+
+            </form>
+
+            <div class="home-link">
+
+                <span class="home-text">
+
+                    Click here to go
+
+                </span>
+
+                <a href="/adminhome.html">
+
+                    Admin Home
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

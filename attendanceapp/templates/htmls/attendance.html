@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Attendance</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="overlay">
+
+        <div class="login-box">
+
+            <h2>
+                START<br>
+                ATTENDANCE
+            </h2>
+
+            {% if window_open_session %}
+            <h3 class="success-message">
+                {{window_open_session}} Window is Open
+            </h3>
+            {% endif %}
+
+            {% if window_closed %}
+            <h3 class="success-message">
+                Attendance Window Closed.<br>
+                Allowed Times: 9:00-9:45 AM (Morning), 4:00-4:30 PM (Evening)
+            </h3>
+            {% endif %}
+
+            {% if data %}
+
+            <h3 class="success-message">
+
+                {{data}}
+
+            </h3>
+
+            {% endif %}
+
+            <form action="/attendanceAction" method="post">
+
+                {% csrf_token %}
+
+                <div class="login-buttons">
+
+                    <button type="submit">
+
+                        Start Attendance
+
+                    </button>
+
+                </div>
+
+            </form>
+
+            <div class="home-link">
+
+                <span class="home-text">
+
+                    Click here to go
+
+                </span>
+
+                <a href="/userlogin.html">
+
+                    User Login
+
+                </a>
+                &nbsp;|&nbsp;
+                <a href="/myattendance.html">
+
+                    My Attendance
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
